@@ -1,0 +1,31 @@
+.card {
+    box-shadow: 0 1vh 2vh 0 rgba(0, 0, 0, 0.2), 0 1vh 3vh 0 rgba(0, 0, 0, 0.19);
+    width: 40%;
+    height: 40%;
+    margin-left: 50vh;
+    margin-bottom: 30vh;
+    opacity: 0;
+  }
+  .card_data {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 2vh;
+    padding: 1vh;
+  }
+  .card_title {
+    color:#FF8C00;
+  }
+  .card_excerpt , .card_subtitle , .card_meta{
+    color:#888;
+  }
+  .card_excerpt {
+    flex: 1;
+    border-top: 1px solid #c5c3c3;
+    padding-top: 4vh;
+  }
+
+ .card_title , .card_subtitle {
+    margin: 0px 0px 0px 70px; 
+    padding: 10px 0px 0px 0px;
+  }

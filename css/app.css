@@ -1,0 +1,107 @@
+/* Style for our header texts
+	* --------------------------------------- */
+	/* h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: 	#000000;
+		margin:0;
+	} */
+	/* .intro p{
+		color: 	#000000;
+	} */
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+/* 	#infoMenu li a {
+		color: 	#000000;
+  } */
+
+/*   Initial page */
+
+.initial_page {
+	display: flex;
+	/* flex-wrap: wrap; */
+}
+.initial-left {
+	flex: 1;
+}
+.initial-right {
+	flex: 1;
+	
+}
+.img0 {
+	width: 75vh;
+	margin-top: 20vh;
+}
+
+
+@media only screen and (min-width: 768px) {
+	.initial-right {
+		height:auto;
+		background-image: linear-gradient(	#FFA500, 	#8B4513, 	#00003E , #000018);
+    	border-radius: 0px 0px 0px 800px;
+	}
+	.initial-left-content{
+		margin-top:30vh;
+		margin-left: 5vh; 
+	}
+	
+}
+
+@media only screen and (max-width: 768px) {
+
+	.initial_page {
+		flex-direction: column;
+	}
+	.initial-right {
+		background-image: linear-gradient(	#FFA500, 	#8B4513, 	#00003E , #000018);
+		border-radius: 300px 0px 0px 0px;
+	}
+}
+
+/*   Services */
+.service2 {
+	display: flex;
+	flex-wrap: wrap;
+}
+.left {
+	flex: 1;
+}
+.right {
+	flex: 1;
+}
+
+
+@media only screen and (min-width: 768px) {
+	.right {
+		margin-top: 40vh;
+	}
+}
+@media only screen and (max-width: 768px) {
+    .left {
+		min-width: 300px;
+		max-height: 400px;
+	}
+	.right {
+		min-width: 300px;
+		max-height: 400px;
+	}
+}
+
+/* Comments */
+@media only screen and (max-width: 768px) {
+    .card {
+		margin-left: 1vh;
+	}
+}
+
+/*   Clients */
+.bannerClients {
+	width:100%;
+}
+
+.clients_logo {
+	width: 100%;
+	opacity: 0;
+}
