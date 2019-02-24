@@ -3,8 +3,9 @@
         <tr>
             <th>ID</th>
             <th>Author</th>
+            <th>Author description</th>
             <th>Email</th>
-            <th>Content</th>
+            <th>Comment text</th>
             <th>Date</th>
             <th>Status</th>
             <th>Approved</th>
@@ -23,8 +24,9 @@
     {
         $comment_id = $row['comment_id'];
         $comment_author = $row['comment_author'];
+        $comment_author_description = $row['comment_author_description'];
         $comment_email = $row['comment_email'];
-        $comment_content = $row['comment_content'];
+        $comment_text = $row['comment_text'];
         $comment_date = $row['comment_date'];
         $comment_status = $row['comment_status'];
         
@@ -32,8 +34,9 @@
         echo "<tr>";
         echo "<td>$comment_id</td>";
         echo "<td>$comment_author</td>";
+        echo "<td>$comment_author_description</td>";
         echo "<td>$comment_email</td>";
-        echo "<td>$comment_content</td>";
+        echo "<td>$comment_text</td>";
         echo "<td>$comment_date</td>";
         echo "<td>$comment_status</td>";
 

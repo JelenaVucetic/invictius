@@ -41,32 +41,17 @@ include "./includes/header.php";
       include "./includes/services.php";
       ?>
         <!-- Comments -->
-	<div class="section" id="section2">
+  <div class="section" id="section2">
 		<div class="intro">
         <div class="comments-top" id="comments">
           <h1>Rekli su o nama</h1>
           <h2>Tekst</h2>
         </div>
-    </div>
-    <div class="slide" id="slide4">
-        <div class="card hideme" id="card">
-          <div class="card_data">
-            <div class="card_heading">
-              <h3 class="card_title">Richard Parker</h3>
-              <p class="card_subtitle">CEO at Lorem</p>
-            </div>
-              <p class="card_excerpt">Some text dhsafjkds fksjfksd fijskfj fsjfkds fsjfksdn fskf sifjskjdhajb sahjfha jsadja jashjfa fjahfja fjashfja fjhasjf fjsakfa fjalk</p>
-            <div class="card_meta">
-            3:13AM - 10 July 2018
-            </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide" id="slide5">
-            <h1>Section 3.2</h1>
-        </div>
-  </div>
-  
+        
+    <?php
+    include "./includes/comment_card.php"
+    ?>
+ 
 
     <!-- Clients -->
 
@@ -84,8 +69,8 @@ include "./includes/header.php";
  
 
 </div>
-<script type="text/javascript" src="fullpage/fullpage.js"></script>
 
+<script type="text/javascript" src="fullpage/fullpage.js"></script>
 
 <script type="text/javascript">
     var myFullpage = new fullpage('#fullpage', {

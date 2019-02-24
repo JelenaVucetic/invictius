@@ -13,10 +13,10 @@
     margin-left: 2vh;
     padding: 1vh;
   }
-  .card_title {
+  .card_author {
     color:#FF8C00;
   }
-  .card_excerpt , .card_subtitle , .card_meta{
+  .card_excerpt , .card_author_description , .card_meta{
     color:#888;
   }
   .card_excerpt {
@@ -25,7 +25,7 @@
     padding-top: 4vh;
   }
 
- .card_title , .card_subtitle {
+ .card_author , .card_author_description {
     margin: 0px 0px 0px 70px; 
     padding: 10px 0px 0px 0px;
   }

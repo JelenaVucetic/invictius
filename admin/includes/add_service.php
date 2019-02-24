@@ -6,24 +6,22 @@ if(isset($_POST['create_service']))
     $service_title = $_POST['service_title'];   
     $service_text = $_POST['service_text'];
 
-    $query_services = "INSERT INTO services(service_title, service_text) ";
-    $query_services .= "VALUES('{$service_title}' , '{$service_text}')";
+    $service_img1 = $_FILES['service_img1']['name'];
+    $image_location = $_FILES['service_img1']['tmp_name'];
+    move_uploaded_file($image_location1 , "../images/$service_img1");
+    $service_img2 = $_FILES['service_img2']['name'];
+    $image_location = $_FILES['service_img2']['tmp_name'];
+    move_uploaded_file($image_location2 , "../images/$service_img2");
+    $service_img3 = $_FILES['service_img3']['name'];
+    $image_location = $_FILES['service_img3']['tmp_name'];
+    move_uploaded_file($image_location3 , "../images/$service_img3");
+
+    $query_services = "INSERT INTO services(service_title, service_text , service_img1, service_img2, service_img3) ";
+    $query_services .= "VALUES('{$service_title}' , '{$service_text}' , '{$service_img1}' , '{$service_img2}', '{$service_img3}')";
 
     $create_service_query= mysqli_query($connection, $query_services); 
     
     $service_id = mysqli_insert_id($connection);
-    
-    $image_names = $_FILES['service_image']['name'];
-    $image_location = $_FILES['service_image']['tmp_name'];
-    $i=0;
-    foreach( $image_names as $name)
-    {
-        $query_image = "INSERT INTO images (service_id, image_name) VALUES ($service_id,'{$name}')";
-        mysqli_query($connection, $query_image);
-
-        move_uploaded_file($image_location[$i], "../images/$name");
-        $i++;
-    }
     
 }
 ?>
@@ -47,8 +45,22 @@ if(isset($_POST['create_service']))
     <br>
 
     <div class="form-group">
-        <label for="image">Service image</label> <br>
-        <input type="file" name="service_image[]" multiple>
+        <label for="image">Service image 1</label> <br>
+        <input type="file" name="service_img1">
+    </div>
+
+    <br>
+
+    <div class="form-group">
+        <label for="image">Service image 2</label> <br>
+        <input type="file" name="service_img2">
+    </div>
+
+    <br>
+
+    <div class="form-group">
+        <label for="image">Service image 3</label> <br>
+        <input type="file" name="service_img3">
     </div>
 
     <br>

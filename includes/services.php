@@ -14,6 +14,7 @@ $service_img3 = $row['service_img3'];
 	<div class="section" id="section1">
     <div class="service2">
       <div class="left">
+        
         <div class="slide" id="slide1">
           <div class="intro">
             <img class="img1" src="images/<?php echo $service_img1?>" alt="">

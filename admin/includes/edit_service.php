@@ -28,13 +28,19 @@ if(isset($_POST['update_service']))
     $service_text = $_POST['service_text'];
 
     $service_img1 = $_FILES['service_img1']['name'];
-    $image_location = $_FILES['service_img1']['tmp_name'];
+    $image_location1 = $_FILES['service_img1']['tmp_name'];
+
+    move_uploaded_file($image_location1 , "../images/$service_img1");
 
     $service_img2 = $_FILES['service_img2']['name'];
-    $image_location = $_FILES['service_img2']['tmp_name'];
+    $image_location2 = $_FILES['service_img2']['tmp_name'];
+
+    move_uploaded_file($image_location2 , "../images/$service_img2");
 
     $service_img3 = $_FILES['service_img3']['name'];
-    $image_location = $_FILES['service_img3']['tmp_name'];
+    $image_location3 = $_FILES['service_img3']['tmp_name'];
+
+    move_uploaded_file($image_location3 , "../images/$service_img3");
 
     $query = "UPDATE services SET ";
     $query .="service_title = '{$service_title}', ";
